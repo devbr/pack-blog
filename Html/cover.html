@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="<x:blogDescription/>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title><x:blogName/></title>
+
+        <meta name="keywords" content="news,noticia,blog,brasil,brazil,brasilian,culture,cultura,politics, politica,religião,web,developer,internet,programa">
+        <link rel="canonical" href="<x:blogLink/>">
+
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:title" content="<x:blogName/>">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="<x:blogLink/>">
+        <meta property="og:image" content="<x:blogMedia/>">
+        <meta property="og:site_name" content="<x:blogName/>">
+        <meta property="og:description" content="<x:blogDescription/>">
+        <meta property="og:updated_time" content="86400">
+
+        <meta property="fb:app_id" content="1074509609321655">
+
+        <meta name="twitter:title" content="<x:blogName/>">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@3illRocha">
+        <meta name="twitter:creator" content="@3illRocha">
+        <meta name="twitter:url" content="<x:blogLink/>">
+        <meta name="twitter:description" content="<x:blogDescription/>">
+        <meta name="twitter:image" content="<x:blogMedia/>">
+
+        <link rel="shortcut icon" href="<x:url/>media/favicon.ico">
+        <link rel="apple-touch-icon" href="<x:url/>media/ios_icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Kotta+One" rel="stylesheet">
+        <x:style/>
+        <style>body{background:#131313}.container{display:none;}</style>
+    </head>
+    <body>
+
+        <img id="loader" src="<x:url/>media/i.gif" style="position:fixed;top:50%;left:50%;margin:-5px 0 0 -69px">
+
+		<div class="container cover">
+
+            <img src="<x:url/>media/plus.png" id="botao">
+            <div id="menu" class="menu hide">
+                <a href="javascript:return false" class="active">Capa</a>
+                <a href="<x:url/>about">Sobre nós</a>
+                <a href="<x:url/>privacidade">Privacidade</a>
+                <hr />
+                <a href="" id="chColor">Mudar Cores</a>
+                <a href="<x:url/>e/new">Criar artigo</a>
+            </div>
+        
+            <img src="<x:url/>media/bm.png" class="logobar">
+	        
+            <div class="topsel">
+                <form>
+	               <input type="text" name="search" id="topselsearch" value="<x:search/>" placeholder="Buscar..." />
+                   <x::select name="category" id="topselcategoria" data="categories" onchange="form.submit()"/>	               
+                </form>
+	        </div>
+
+	        <img src="<x:url/>media/cover/destaque.jpg" id="destaque">
+            <!-- <a class="btwitter" title="Twittar isso!" href="https://twitter.com/intent/tweet?text=A culpa é do Tangredo&hashtags=culpadotangredo,culpadamarisa&url=http://dbrasil.tk/media/cover/destaque.jpg"> Tweetar </a> -->
+
+            <div class="shareAll">                    
+                <div class="shareCont" style="float:right">
+                    <div class="g-plusone" data-size="medium" data-annotation="none" data-href="<x:articleLink/>"></div>
+                    <script type="IN/Share"></script>                    
+                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                    <div class="fb-like" data-href="<x:articleLink/>" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>                            
+                </div>                      
+            </div>
+
+            
+			<x:destaques tag="div" class="destaques"/>
+
+			<hr />
+			
+			<footer>	
+				<b>DBrasil</b> &copy; 2017 - <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode" target="new">Creative Commons Licensed</a> | <a href="<x:url/>about">Sobre &amp; Contato</a> | <a href="<x:url/>privacidade">Privacidade</a>
+			</footer>
+		</div>
+	
+		<x:script/>
+        <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}</script>
+        <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: pt_BR</script>
+        <script>
+            !function(d,s,id){
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p=/^http:/.test(d.location)?'http':'https';
+                if(!d.getElementById(id)){
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p+'://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js,fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
+        <script>
+            //FACEBOOK --------------------------------------
+            window.fbAsyncInit = function() {
+                FB.init({appId:'1074509609321655',xfbml:true,version:'v2.8'});
+            };
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/pt_BR/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </body>
+</html>

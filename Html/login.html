@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="<x:blogDescription/>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title><x:blogName/></title>
+
+        <link rel="shortcut icon" href="<x:url/>media/favicon.ico">        
+        <link rel="apple-touch-icon" href="<x:url/>media/ios_icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Kotta+One" rel="stylesheet">
+
+        <x:style/>
+        <style>body{background:#131313}.container{display:none;}</style>
+    </head>
+    <body>
+        <img id="loader" src="/media/i.gif" style="position:fixed;top:50%;left:50%;margin:-5px 0 0 -69px">
+        <div id="nogin" style="display:none;position:fixed;z_index:3000;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.9)">
+            <div id="noginTxt" style="position:fixed;width:200px;top:50%;left:50%;margin:-30px 0 0 -100px;color:#FFC;text-align:center;font-size:1.1em;padding:10px 0;border:1px dashed #900;border-left:none;border-right:none">Invalid password!</div>
+            </div>
+        
+    	<div class="container">        	
+    		<div class="login">
+    			
+                <h1>Hello!</h1>
+    			
+                <input type="text" id="login" autocomplete="off" placeholder="ID">
+    			<input type="password" id="passw" autocomplete="off" placeholder="Senha">
+
+                <div class="att">Dados seguros - encriptados AES 256</div>
+
+    			<button type="button" id="btlogin">Ok</button>
+    		</div>            
+            
+            <footer>
+                <a href="<x:url/>"><b>DBrasil</b></a> &copy; 2017<br>
+                <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode" target="new">Creative Commons Licensed</a><br>
+                <a href="/privacidade">Privacidade</a><br>
+                <a href="/about">Sobre &amp; Contato</a>
+            </footer>
+        </div>
+
+        <x:script/>
+    </body>
+</html>

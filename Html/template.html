@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="<x:blogDescription/>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title><x:articleTitle/> - <x:blogName/></title>
+
+        <meta name="keywords" content="news,noticia,blog,brasil,brazil,brasilian,culture,cultura,politics, politica,religião,web,developer,internet,programa">
+        <link rel="canonical" href="<x:articleLink/>">
+
+        <meta name="article:title" content="<x:articleTitle/>">
+        <meta name="article:publication" content="<x:blogName/>">
+
+        <meta property="article:author" content="<x:authorLink/>">
+        <meta property="article:section" content="<x:articleCategory/>">
+        <meta property="article:tag" content="<x:articleTags/>">
+        <meta property="article:published_time" content="<x:articleDateTime/>">
+
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:title" content="<x:articleTitle/>">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="<x:articleLink/>">
+        <meta property="og:image" content="<x:articleMedia/>">
+        <meta property="og:site_name" content="<x:blogName/>">
+        <meta property="og:description" content="<x:blogDescription/>">        
+
+        <meta property="fb:app_id" content="1074509609321655">
+        <meta property="fb:admins" content="10211954596637829"/>
+
+        <meta name="twitter:title" content="<x:articleTitle/>">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="<x:articleLink/>">
+        <meta name="twitter:description" content="<x:blogDescription/>">
+        <meta name="twitter:image" content="<x:articleMedia/>">
+
+        <link rel="shortcut icon" href="<x:url/>media/favicon.ico">
+        <link rel="apple-touch-icon" href="<x:url/>media/ios_icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Kotta+One" rel="stylesheet">
+        <x:style/>
+        <style>body{background:#131313}.container{display:none;}</style>
+    </head>
+    <body>
+
+        <img id="loader" src="<x:url/>media/i.gif" style="position:fixed;top:50%;left:50%;margin:-5px 0 0 -69px">
+        
+        <div class="container">
+
+            <img src="<x:url/>media/plus.png" id="botao">
+            <div id="menu" class="menu hide">
+                <a href="<x:url/>">Capa</a>
+                <a href="<x:url/>about">Sobre nós</a>
+                <a href="<x:url/>privacidade">Privacidade</a>
+                <!--<hr />
+                <a href="#">Índice</a>
+                <a href="#">Próximo capítulo</a>
+                <a href="#">Capítulo anterior</a>-->
+                <hr />
+                <a href="<x:articleEditLink/>">Editar</a>
+                <a href="" id="chColor">Mudar Cores</a>
+            </div>
+
+            <a href="<x:url/>">
+                <img src="<x:url/>media/bm.png" class="logobar">
+            </a>
+            
+            <article>
+                <x:articleTitle tag="h1"/>
+                <x:articleResume tag="blockquote"/>
+                <x:articleContent/>
+            </article>
+
+            <div class="shareAll">                    
+                <div class="shareCont" style="float:right">
+                    <div class="g-plusone" data-size="medium" data-annotation="none" data-href="<x:articleLink/>"></div>
+                    <script type="IN/Share"></script>                    
+                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                    <div class="fb-like" data-href="<x:articleLink/>" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>                            
+                </div>                      
+            </div>
+            <div id="disqus_thread"></div>
+            <hr/>
+            
+            <footer>
+                <a href="<x:url/>"><b>DBrasil</b></a> &copy; 2017 - Escrito por <a href="<x:authorLink/>">Bill Rocha</a><br><a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode" target="new">Creative Commons Licensed</a> | <a href="/privacidade">Privacidade</a> | <a href="/about">Sobre &amp; Contato</a>
+            </footer>
+        </div>        
+
+        <x:script/>        
+        <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}</script>
+        <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: pt_BR</script>
+        <script>
+            !function(d,s,id){
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    p=/^http:/.test(d.location)?'http':'https';
+                if(!d.getElementById(id)){
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p+'://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js,fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
+        <script>
+            //FACEBOOK --------------------------------------
+            window.fbAsyncInit = function() {
+                FB.init({appId:'1074509609321655',xfbml:true,version:'v2.8'});
+            };
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/pt_BR/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <script>
+            var disqus_config = function () {
+                this.page.url = "<x:articleLink/>";
+                this.page.identifier = aID; 
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://dbrasil.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    </body>
+</html>
+

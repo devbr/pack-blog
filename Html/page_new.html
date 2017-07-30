@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title><x:articleTitle/> - <x:blogName/></title>
+
+        <link rel="shortcut icon" href="<x:url/>media/favicon.ico">
+        <link rel="apple-touch-icon" href="<x:url/>media/ios_icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Kotta+One" rel="stylesheet">
+
+        <x:style/>
+        <style>body{background:#131313}.container{display:none;}</style>
+    </head>
+    <body>
+
+        <img id="loader" src="<x:url/>media/i.gif" style="position:fixed;top:50%;left:50%;margin:-5px 0 0 -69px">
+        
+        <div class="container">
+
+            <img src="/media/plus.png" id="botao">
+            <div id="menu" class="menu hide">
+                <a href="<x:url/>">Capa</a>
+                <a href="<x:url/>about">Sobre nós</a>
+                <a href="<x:url/>privacidade">Privacidade</a>
+                <hr>
+                <a href="#">Índice</a>
+                <a href="" onclick="return salvar()">Salvar edição</a>
+                <a href="" id="chColor">Mudar Cores</a>
+            </div>
+
+            <a href="<x:url/>">
+                <img src="<x:url/>media/bm.png" class="logobar">
+            </a>
+        
+            <article>
+                
+                <x:articleTitle tag="h1" class="edtTitle" id="edtTitle"/>
+                <x:articleResume tag="p" class="edtDestaque destaque"/>                
+                <div class="edtContent articlecontent"/><x:articleContent tag="p"/></div>
+
+                <hr />
+                
+                <footer class="control"> 
+                    <div id="msg">...</div>
+                    <label>Link de acesso:</label>                                       
+                    <input type="text" id="txtlink" value="<x:articleLink/>"/>
+
+                    <label>Tags:</label>                                       
+                    <input type="text" id="txttags" value="<x:articleTags/>"/>    
+
+                    <label>Categoria:</label>
+                    <x::select data="categoria" id="category"/>
+
+                    <label>Status:</label>
+                    <x::select data="status" id="status"/>
+
+                    <hr />
+                    <div class="control buttons">
+                        <button type="button" id="link">CheckLink</button>
+                        <button type="button" id="save">Save</button>
+                        <button type="button" id="cancel">Cancelar</button>
+                    </div>
+
+                    <a href="<x:url/>"><b>DBrasil</b></a> &copy; 2017 - Escrito por <a href="<x:authorLink/>">Bill Rocha</a><br><a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode" target="new">Creative Commons Licensed</a> | <a href="/privacidade">Privacidade</a> | <a href="/about">Sobre &amp; Contato</a>
+                </footer>
+            </article>
+        </div>
+        <x:script/>
+    </body>
+</html>
