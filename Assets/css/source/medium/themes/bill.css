@@ -1,0 +1,134 @@
+.medium-toolbar-arrow-under:after
+{
+    top: 40px;
+    border-color: #000 transparent transparent transparent;
+    display:none;
+}
+
+.medium-toolbar-arrow-over:before
+{
+    border-color: transparent transparent #000 transparent;
+    display:none;
+}
+
+.medium-editor-toolbar
+{
+    border: none;
+    background-color: rgba(0, 0, 0, .8);
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.medium-editor-toolbar li button
+{
+    box-sizing: border-box;
+    min-width: 40px;
+    height: 40px;
+    padding: 5px 12px;
+
+    -webkit-transition: background-color .2s ease-in, color .2s ease-in;
+            transition: background-color .2s ease-in, color .2s ease-in; 
+
+    color: #ccc;
+    border: none;
+    border-radius: 0 !important;
+    background-color: transparent;
+}
+.medium-editor-toolbar li button:hover
+{
+    color: #a2d7c7; 
+    background-color: #000;
+}
+
+
+
+.medium-editor-toolbar li .medium-editor-button-active
+{
+    color: #a2d7c7; 
+    background-color: #000;
+}
+
+.medium-editor-toolbar-form
+{
+    overflow: hidden; 
+
+    color: #ccc;/*
+    border-radius: 50px;*/
+    background: #000;
+}
+.medium-editor-toolbar-form .medium-editor-toolbar-input
+{
+    box-sizing: border-box;
+    width: 220px; 
+    height: 40px;
+    padding-left: 16px;
+
+    color: #ccc;
+    background: #000;
+}
+.medium-editor-toolbar-form .medium-editor-toolbar-input::-webkit-input-placeholder
+{
+    color: #f8f5f3;
+    color: rgba(248, 245, 243, .8);
+}
+.medium-editor-toolbar-form .medium-editor-toolbar-input:-moz-placeholder
+{
+    /* Firefox 18- */
+    color: #f8f5f3;
+    color: rgba(248, 245, 243, .8);
+}
+.medium-editor-toolbar-form .medium-editor-toolbar-input::-moz-placeholder
+{
+    /* Firefox 19+ */
+    color: #f8f5f3;
+    color: rgba(248, 245, 243, .8);
+}
+.medium-editor-toolbar-form .medium-editor-toolbar-input:-ms-input-placeholder
+{
+    color: #f8f5f3;
+    color: rgba(248, 245, 243, .8);
+}
+.medium-editor-toolbar-form a
+{
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px); 
+
+    color: #ccc;
+}
+.medium-editor-toolbar-form .medium-editor-toolbar-close
+{
+    margin-right: 16px;
+}
+
+.medium-editor-toolbar-anchor-preview
+{
+    padding: 5px 12px; 
+    border-radius: 50px;
+    background: #000;
+}
+
+.medium-editor-anchor-preview a
+{
+    text-decoration: none; 
+    color: #ccc;
+}
+
+
+.medium-editor-placeholder {
+    color:#DDD !important;
+}
+
+@media (min-width: 600px){
+    .medium-editor-toolbar-active
+    {
+        max-width: 655px;
+    }
+
+    .medium-editor-toolbar
+    {
+        left: 50% !important;
+        margin-left: -325px;
+    }
+
+
+}

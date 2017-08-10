@@ -1,0 +1,162 @@
+/* css/source/doc.css */
+body {
+    background: #234;
+
+    /*teste */
+    background: #131313;
+
+
+    color: #BBB;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #EEE;
+}
+
+a {
+    color: #f44336;
+}
+
+hr {
+    border-color: #456;
+}
+
+button {
+    background: #444;
+    background: linear-gradient(to top,#222,#333);
+    color: #FFF;
+}
+
+button:last-child {
+    margin-right: 0
+}
+
+input,select {
+    background: #FFF;
+    color: #000;
+    box-shadow: 1px 2px 10px rgba(0,0,0,.5) inset;
+    border-radius: 3px;
+}
+
+pre {
+    background: rgba(0,0,0,.1);
+    text-shadow: none;
+    color: #cddc39;
+}
+
+blockquote,
+.edtDestaque {
+    color: #cddc39;
+    text-shadow: 1px 1px 1px #131313
+}
+
+figcaption {
+    color: #999
+}
+
+article {
+    text-shadow: 1px 1px 1px #000
+}
+
+article figure img {
+    box-shadow: 0 10px 30px rgba(0,0,0,.7)
+}
+
+footer a {
+    color: #f44336
+}
+
+footer.control #msg {
+    background: #FFF;
+    border: 1px solid #F00;
+    color: #000;
+    text-shadow: none;
+}
+
+.menu {
+    background: #833;
+    color: #000;
+    border-bottom: 12px solid #933;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5)
+}
+
+.menu a {
+    color: #DDD
+}
+
+.menu a:hover {
+    background: #944;
+    color: #FFC
+}
+
+.menu a.active {
+    color: #999
+}
+
+.menu hr {
+    border-color: #955;
+}
+
+.destaques * {
+    transition: 1s;
+}
+
+.destaques a:hover .item {
+    background: rgba(233, 30, 99, 0.67);
+
+    /* teste */
+    background: #2A2A2A;
+    color: #BDBDBD;
+}
+
+.destaques a:hover img {
+    margin-right: 12px;
+}
+
+.destaques a:first-child .item {
+    border-top: none;
+}
+
+.destaques a:last-child .item {
+    border-bottom: none;
+}
+
+.destaques .item {
+    color: #9E9E9E;
+    border-top: 1px dashed #607D8B;
+
+    /*teste */
+    border-top: 1px solid #292929;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+span.pubdata b {
+    color: #8BC34A;
+}
+
+
+.destaques h2 {
+    color: #faebd7;
+}
+
+.cover input,
+.cover select {
+    background: #456;
+    border: 1px solid #456;
+    color: #EEE;
+    ;
+}
+
+.cover input {
+    border-right: none;
+}
+
+
+@media(min-width: 600px) {
+      
+}
+
+@media(max-width: 410px) {
+
+}

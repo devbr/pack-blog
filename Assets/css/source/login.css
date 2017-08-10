@@ -1,0 +1,158 @@
+.logo {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.login, footer {
+    /* width: 300px; */
+    padding: 40px 20px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: .9em;
+}
+
+footer {
+	margin-bottom: 0;
+	padding: 20px 20px 0 20px;
+	clear: both;
+}
+
+.login h1 {
+    margin: 0 0 60px 0;
+    text-align: center;
+    font-size:	3em;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.login input, 
+.login button {
+    margin: 30px auto;
+    border: none;
+    border-bottom: 1px solid #E91E63;
+    border-radius: 0;
+    width: 250px!important;
+    padding: 9px;
+    display: block;
+    font-size: 1.1em;
+    color: #CDDC39;
+}
+
+.login button {
+	border: none;
+	border-radius: 50%;
+	height: 80px;
+	width: 80px !important;
+	margin: 70px auto 0 auto;
+	cursor: pointer;
+	background: #AD1457;
+	border: 3px solid #123;
+	color: #FFF;
+	transition: .3s;
+}
+
+.login button:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,.6) inset;
+    transform: scale(.9,.9);
+    opacity: .7;
+}
+
+.att {
+	color: #B00;
+    font-size: .8em;
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+
+/* PERFIL */
+
+.foto {
+	width: 170px;
+	border-radius: 50%;
+	border: 10px double #345;
+}
+
+.perfil h1 {
+	font-size: 2.8em;
+}
+
+.perfil .sobre {
+	clear:both;
+}
+
+.perfil .sobre, 
+.perfil .sobre * {
+	text-align: justify;
+	/* display: none; */
+}
+
+.lista {
+	list-style: none;
+	padding:0;
+	/* width: 100%; */
+	/* max-width: 220px; */
+	min-width: 35%;
+	float: left;
+	margin: 10px 20px 10px 0;
+}
+
+.lista a {
+	text-decoration: none;
+	color: #BBC;
+}
+
+.lista li {
+	padding: 8px;
+	/* background: linear-gradient(to left, #345, #456); */
+	border-bottom: 1px dashed #456;
+	text-align: left;
+	margin:10px 0;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.lista li:hover {
+	background: #456;
+	box-shadow: 9px 9px 15px rgba(0,0,0,.3);
+}
+
+.lista li span {
+	float: right;
+	color: #BBC;
+	display: block;
+}
+
+.usuario {
+	float:left;
+	max-width: 61%;
+	width:61%;
+}
+
+.perfil blockquote {
+	clear: both;
+	color: #cddc39;
+    text-shadow: 1px 1px 1px #123;
+}
+.perfil h1 {
+	margin-bottom: 20px;
+}
+
+
+@media(max-width: 600px) {
+	.lista {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.usuario {
+		float:none;
+		max-width:100%;
+		width: 100%;
+	}
+
+	.foto {
+		width:250px;
+	}
+}
