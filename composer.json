@@ -9,9 +9,12 @@
         "name": "Bill Rocha",
         "email": "prbr@ymail.com"
     }],
+    "config": {
+        "preferred-install": "dist"
+    },
     "require": {
         "php": ">=5.6",
-        "devbr/install-plugin":"dev-master"
+        "devbr/install-plugin":"*"
     },
     "autoload": {
         "psr-4": {
