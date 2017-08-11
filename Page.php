@@ -14,9 +14,9 @@
 
 namespace Blog;
 
-use Resource\Main;
-use Lib;
-
+//use Resource\Main;
+use Devbr\Database;
+use Devbr\User;
 /**
  * Page Class
  *
@@ -26,7 +26,7 @@ use Lib;
  * @license  <https://opensource.org/licenses/MIT> MIT
  * @link     http://paulorocha.tk/devbr
  */
-class Page extends Main
+class Page
 {
 
     public $scripts = ['1'];
@@ -53,7 +53,7 @@ class Page extends Main
         'blogMedia' => $this->blogMedia
         ];
         //USER
-        $user = Lib\User::this();
+        $user = User::this(); 
         $base = new Model\Base();
 
         $category = isset($_GET['category']) ? 0 + $_GET['category'] : 0;
