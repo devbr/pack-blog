@@ -14,9 +14,9 @@
 
 namespace Blog;
 
-use Resource\Main;
-use Lib\Aes;
-use Lib\User;
+use Devbr\Aes;
+use Devbr\Database;
+use Devbr\User;
 use Blog\Ajax;
 
 /**
@@ -28,7 +28,7 @@ use Blog\Ajax;
  * @license  <https://opensource.org/licenses/MIT> MIT
  * @link     http://paulorocha.tk/devbr
  */
-class Xlog extends Main
+class Xlog
 {
 
     function __construct()

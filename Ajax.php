@@ -14,9 +14,6 @@
 
 namespace Blog;
 
-use Resource\Main;
-use Lib;
-
 /**
  * Ajax Class
  *
@@ -26,7 +23,7 @@ use Lib;
  * @license  <https://opensource.org/licenses/MIT> MIT
  * @link     http://paulorocha.tk/devbr
  */
-class Ajax extends Main
+class Ajax
 {
 
     public $patchHtml = __DIR__.'/Html/';
@@ -40,7 +37,7 @@ class Ajax extends Main
      */
     function put()
     {
-        \Lib\App::e($_POST);
+        \App::e($_POST);
     }
 
     /**
@@ -162,13 +159,13 @@ class Ajax extends Main
                'url'  => _URL.$this->articlePatch.$name.$ext];
 
             //Create a directory (if not exists)
-            Lib\Cli\Main::checkAndOrCreateDir(_WWW.$this->articlePatch, true);
+            \Devbr\Cli\Main::checkAndOrCreateDir(_WWW.$this->articlePatch, true);
 
             //Save uploaded file
             move_uploaded_file($_FILES["files"]["tmp_name"][0], _WWW.$this->articlePatch.$name.$ext);
 
             //Resize image
-            $canvas = new Lib\Canvas(_WWW.$this->articlePatch.$name.$ext);
+            $canvas = new \Devbr\Canvas(_WWW.$this->articlePatch.$name.$ext);
             $canvas->set_quality(80)
                    ->resize('540')
                    ->save(_WWW.$this->articlePatch.$name.$ext);

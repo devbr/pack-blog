@@ -14,8 +14,7 @@
 
 namespace Blog\Model\Reports;
 
-use Lib;
-use Lib\Db;
+use Devbr\Database as Db;
 
 /**
  * Admin Class

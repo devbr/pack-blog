@@ -14,8 +14,6 @@
 
 namespace Blog;
 
-use Resource\Main;
-use Lib;
 
 /**
  * Admin Class
@@ -26,7 +24,7 @@ use Lib;
  * @license  <https://opensource.org/licenses/MIT> MIT
  * @link     http://paulorocha.tk/devbr
  */
-class Admin extends Main
+class Admin
 {
     public $scripts = [];
     public $styles = [];

@@ -14,8 +14,7 @@
 
 namespace Blog\Model;
 
-use Lib;
-use Lib\Db;
+use Devbr\Database as Db;
 
 /**
  * Xlog Class
@@ -57,7 +56,7 @@ class Xlog
     {
 
         $result = $this->db->query('SHOW TABLE STATUS FROM devbr_site');
-        \Lib\App::e($result);
+        \App::e($result);
 
 
         $result = $this->db->query('SELECT id,agent FROM '.$this->accessTable.' WHERE id > 6693');

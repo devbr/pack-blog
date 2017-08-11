@@ -29,7 +29,7 @@ use Devbr\User;
 class Page
 {
 
-    public $scripts = ['1'];
+    public $scripts = ['blog/1'];
     public $styles = [];
 
     public $patchHtml = __DIR__.'/Html/';
@@ -42,6 +42,7 @@ class Page
 
     public $header = false;
     public $footer = false;
+    public $pageName = null;
 
 
     function index($rqst, $param)
@@ -96,14 +97,14 @@ class Page
     function view($rqst, $param)
     {
         if ($param['id'] === '0') {
-            Lib\App::go($this->blogLink);
+            \App::go($this->blogLink);
         }
 
         $base =    new Model\Base();
         $article = new Model\Article($param['id']);
 
         if ($article->get('id') === false || $article->get('status') != 1) {
-            Lib\App::go($this->blogLink);
+            \App::go($this->blogLink);
         }
         
         //Geting the first image in field "media" in database
@@ -111,7 +112,7 @@ class Page
         $articleMedia = (isset($media[0]->src)) ? $media[0]->src : $this->blogMedia;
 
         //USER
-        $user = Lib\User::this();
+        $user = User::this();
         $user->getById($article->get('author'));
 
         //Data to template
@@ -152,15 +153,15 @@ class Page
     function edit($rqst, $param)
     {
         //Impedindo que se acesse sem LOGIN...
-        Lib\App::go('login');
+        \App::go('login');
 
         //Checando se a rota está correta
         if (!isset($param['id'])) {
-            Lib\App::go($this->blogLink);
+            \App::go($this->blogLink);
         }
 
         //USER
-        $user = Lib\User::this();
+        $user = User::this();
 
         //$user->getMe();
         $user->getById(7);
@@ -229,6 +230,31 @@ class Page
         $this->scripts = ['3'];
 
         $this->sendPage('perfil');
+    }
+
+
+    /**
+     * Utils
+     * @param  [type] $page  [description]
+     * @param  [type] $data  [description]
+     * @param  [type] $jsvar [description]
+     * @return [type]        [description]
+     */
+    final public function sendPage($page, $data = null, $jsvar = null)
+    {
+        $html = new \Devbr\Html();
+
+        $html->setPathHtml($this->patchHtml)
+             ->body($page)
+             ->header($this->header)
+             ->footer($this->footer)
+             ->setName($this->pageName)
+             ->insertScripts($this->scripts)
+             ->insertStyles($this->styles)
+             ->val($data)
+             ->jsvar($jsvar)
+             ->render()
+             ->send();
     }
 
 

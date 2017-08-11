@@ -14,8 +14,7 @@
 
 namespace Blog\Model;
 
-use Lib;
-use Lib\Db;
+use Devbr\Database as Db;
 
 /**
  * Result Class
