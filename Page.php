@@ -202,7 +202,7 @@ class Page
         $data['articleTags'] = $article->get('tags');
 
         //$this->styles =  ['source/font-awesome.min'];
-        $this->scripts = ['2'];
+        $this->scripts = ['blog/2'];
 
         //Send page to user
         $this->sendPage('page_'.$page, $data, ['aType'=>$page, 'aID'=>$aID, 'uID'=>$user->get('id'), 'pageLink'=>$article->get('link')]);
@@ -213,11 +213,11 @@ class Page
     {
         //exit('<pre>'.print_r($_SERVER, true));
         //$this->styles = ['source/skell', 'source/login', 'source/login_doc'];
-        $this->scripts = ['3'];
+        $this->scripts = ['blog/3'];
 
         $key = str_replace(
             array("\r","\n","-----BEGIN PUBLIC KEY-----","-----END PUBLIC KEY-----"), '',
-                            file_get_contents(_CONFIG.'Key/public.key'));
+                            file_get_contents(\App::Config().'Key/public.key'));
 
         $this->sendPage('login', [], ['KEY'=>$key]);
     }
@@ -227,7 +227,7 @@ class Page
     {
         //exit('<pre>'.print_r($_SERVER, true));
         //$this->styles = ['source/skell', 'source/login', 'source/login_doc'];
-        $this->scripts = ['3'];
+        $this->scripts = ['blog/3'];
 
         $this->sendPage('perfil');
     }
